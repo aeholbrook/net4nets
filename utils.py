@@ -1,6 +1,8 @@
 from numpy.random import seed
 seed(1017)
 import tensorflow as tf
+
+from tensorflow.python.client import device_lib
 #tf.random.set_seed(1017)
 
 import os
@@ -35,5 +37,19 @@ from keras.layers import Dense, Dropout, Activation, Input
 from keras.layers import Flatten, Conv2D, MaxPooling2D, LSTM
 from keras.layers import BatchNormalization, Conv3D, MaxPooling3D
 
+import sklearn
+from sklearn import metrics
 from sklearn.utils import class_weight
 from sklearn.model_selection import train_test_split
+from sklearn.datasets import make_classification
+from sklearn.model_selection import cross_val_score
+from sklearn.model_selection import RepeatedStratifiedKFold
+from sklearn.ensemble import RandomForestClassifier
+
+
+from tqdm import tqdm
+
+
+import pandas as pd
+
+
